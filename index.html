@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> SHU GAME</title>
+    </head>
+    <body>
+    <div>
+        <img id="logo" src="Game Assets/loading/logo.svg"></img>
+        <button onclick="gogo()">
+            Play
+        </button>
+    </div>
+        <style type="text/css">
+        
+            body {
+                background-color: #ccf;
+            }
+            #logo {
+                display: block;
+                margin: auto;
+                width: 40%;
+            }
+            button {
+
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                /*padding: 15px 32px;*/
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 600%;
+            }
+            div {
+                
+                background-color: #fcf;
+                text-align: center;
+            }
+        </style>
+        <script type="text/javascript" >
+            function gogo(){
+                
+                
+                var el = document.body;
+
+                  // Supports most browsers and their versions.
+                  var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen 
+                  || el.mozRequestFullScreen || el.msRequestFullScreen;
+                
+                  if (requestMethod) {
+                
+                    // Native full screen.
+                    requestMethod.call(el);
+                
+                  } else if (typeof window.ActiveXObject !== "undefined") {
+                
+                    // Older IE.
+                    var wscript = new ActiveXObject("WScript.Shell");
+                
+                    if (wscript !== null) {
+                      wscript.SendKeys("{F11}");
+                    }
+                  }
+                
+                
+                window.location.replace("game.php");
+            }
+        </script>
+
+    </body>
+</html>
