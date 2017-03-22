@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
- 
+
 	<head>
 		<meta charset="utf-8" />
 		<title>Celebrity Crush</title>
 
- 
+
 		<style>
 		  body {
 		    padding: 0px;
@@ -13,8 +13,8 @@
 		  }
 		  </style>
 	</head>
- 
-	<body>  
+
+	<body>
 		<script>
 		  window.fbAsyncInit = function() {
 		    FB.init({
@@ -22,10 +22,10 @@
 		      xfbml      : true,
 		      version    : 'v2.8'
 		    });
-		
+
 		    // ADD ADDITIONAL FACEBOOK CODE HERE
 		  };
-		
+
 		  (function(d, s, id){
 		     var js, fjs = d.getElementsByTagName(s)[0];
 		     if (d.getElementById(id)) {return;}
@@ -34,10 +34,10 @@
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
 		</script>
-		<link rel="stylesheet" type="text/css" href="css/gamecss.css"> 
+		<link rel="stylesheet" type="text/css" href="css/gamecss.css">
 		<div id="dom-goodimages" style="display: none;">
-			<?php 
-			//images   
+			<?php
+			//images
 		    $dir = "Game Assets/GoodCelebrities/Images/";
 			$it = new FilesystemIterator($dir);
 			foreach ($it as $fileinfo) {
@@ -47,8 +47,8 @@
 	    	?>
 		</div>
 		<div id="dom-goodsounds" style="display: none;">
-			<?php 
-			//sounds  
+			<?php
+			//sounds
 		    $dir = "Game Assets/GoodCelebrities/Sounds/";
 			$it = new FilesystemIterator($dir);
 			foreach ($it as $fileinfo) {
@@ -58,8 +58,8 @@
 	    	?>
 		</div>
 		<div id="dom-badimages" style="display: none;">
-			<?php 
-			//images   
+			<?php
+			//images
 		    $dir = "Game Assets/BadCelebrities/Images/";
 			$it = new FilesystemIterator($dir);
 			foreach ($it as $fileinfo) {
@@ -69,8 +69,8 @@
 	    	?>
 		</div>
 		<div id="dom-badsounds" style="display: none;">
-			<?php 
-			//sounds  
+			<?php
+			//sounds
 		    $dir = "Game Assets/BadCelebrities/Sounds/";
 			$it = new FilesystemIterator($dir);
 			foreach ($it as $fileinfo) {
@@ -79,7 +79,7 @@
 
 	    	?>
 		</div>
-		
+
 		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 		<script>
 		    var div = document.getElementById("dom-goodimages");
@@ -92,7 +92,7 @@
 		    goodsounds = goodsounds.replace('/ /g','');
 		    goodsounds = goodsounds.replace(/\t/g,'');
 		    goodsounds = goodsounds.split(",");
-		    
+
 		    div = document.getElementById("dom-badimages");
 		    var badimages = div.textContent.replace(/\n/g,'');
 		    badimages = badimages.replace('/ /g','');
@@ -106,7 +106,6 @@
 		</script>
 		<script type="text/javascript" src="phaser.min.js"></script>
 		<script type="text/javascript" src="Game.js"></script>
-		<script type="text/javascript" src="Capture.js"></script>
 		<script type="text/javascript" src="MainMenu.js"></script>
 		<script type="text/javascript" src="Preload.js"></script>
 		<script type="text/javascript" src="Boot.js"></script>
